@@ -1,0 +1,22 @@
+[
+  {"id": "DEAL001", "accountId": "ACC001", "repId": "REP001", "value": 50000, "status": "Won", "stage": "Closed Won", "createdAt": "2025-10-15", "closedAt": "2025-12-20"},
+  {"id": "DEAL002", "accountId": "ACC002", "repId": "REP002", "value": 15000, "status": "Won", "stage": "Closed Won", "createdAt": "2025-11-01", "closedAt": "2025-12-15"},
+  {"id": "DEAL003", "accountId": "ACC003", "repId": "REP003", "value": 120000, "status": "Won", "stage": "Closed Won", "createdAt": "2025-09-10", "closedAt": "2025-11-25"},
+  {"id": "DEAL004", "accountId": "ACC004", "repId": "REP004", "value": 35000, "status": "Won", "stage": "Closed Won", "createdAt": "2025-10-20", "closedAt": "2025-12-28"},
+  {"id": "DEAL005", "accountId": "ACC005", "repId": "REP003", "value": 80000, "status": "Won", "stage": "Closed Won", "createdAt": "2025-11-15", "closedAt": "2026-01-10"},
+  {"id": "DEAL006", "accountId": "ACC006", "repId": "REP005", "value": 12000, "status": "Won", "stage": "Closed Won", "createdAt": "2025-12-01", "closedAt": "2026-01-15"},
+  {"id": "DEAL007", "accountId": "ACC007", "repId": "REP001", "value": 95000, "status": "Open", "stage": "Negotiation", "createdAt": "2025-11-20", "closedAt": null},
+  {"id": "DEAL008", "accountId": "ACC008", "repId": "REP004", "value": 28000, "status": "Open", "stage": "Proposal", "createdAt": "2025-12-10", "closedAt": null},
+  {"id": "DEAL009", "accountId": "ACC001", "repId": "REP003", "value": 150000, "status": "Open", "stage": "Discovery", "createdAt": "2025-10-25", "closedAt": null},
+  {"id": "DEAL010", "accountId": "ACC009", "repId": "REP002", "value": 18000, "status": "Lost", "stage": "Closed Lost", "createdAt": "2025-11-05", "closedAt": "2025-12-30"},
+  {"id": "DEAL011", "accountId": "ACC010", "repId": "REP004", "value": 42000, "status": "Won", "stage": "Closed Won", "createdAt": "2025-12-15", "closedAt": "2026-01-25"},
+  {"id": "DEAL012", "accountId": "ACC003", "repId": "REP001", "value": 110000, "status": "Open", "stage": "Negotiation", "createdAt": "2025-12-01", "closedAt": null},
+  {"id": "DEAL013", "accountId": "ACC004", "repId": "REP004", "value": 32000, "status": "Lost", "stage": "Closed Lost", "createdAt": "2025-10-10", "closedAt": "2025-11-20"},
+  {"id": "DEAL014", "accountId": "ACC002", "repId": "REP005", "value": 16000, "status": "Open", "stage": "Proposal", "createdAt": "2026-01-05", "closedAt": null},
+  {"id": "DEAL015", "accountId": "ACC005", "repId": "REP003", "value": 90000, "status": "Open", "stage": "Discovery", "createdAt": "2025-11-28", "closedAt": null},
+  {"id": "DEAL016", "accountId": "ACC007", "repId": "REP001", "value": 105000, "status": "Lost", "stage": "Closed Lost", "createdAt": "2025-09-15", "closedAt": "2025-10-30"},
+  {"id": "DEAL017", "accountId": "ACC006", "repId": "REP002", "value": 14000, "status": "Won", "stage": "Closed Won", "createdAt": "2026-01-10", "closedAt": "2026-01-28"},
+  {"id": "DEAL018", "accountId": "ACC008", "repId": "REP004", "value": 38000, "status": "Open", "stage": "Qualification", "createdAt": "2026-01-15", "closedAt": null},
+  {"id": "DEAL019", "accountId": "ACC001", "repId": "REP001", "value": 65000, "status": "Open", "stage": "Proposal", "createdAt": "2025-12-20", "closedAt": null},
+  {"id": "DEAL020", "accountId": "ACC009", "repId": "REP005", "value": 19000, "status": "Won", "stage": "Closed Won", "createdAt": "2026-01-08", "closedAt": "2026-01-30"}
+]

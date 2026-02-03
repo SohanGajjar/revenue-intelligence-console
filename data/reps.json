@@ -1,0 +1,7 @@
+[
+  {"id": "REP001", "name": "Ankit", "email": "ankit@skygeni.com", "team": "Enterprise", "hireDate": "2024-01-15"},
+  {"id": "REP002", "name": "Sarah Johnson", "email": "sarah@skygeni.com", "team": "SMB", "hireDate": "2023-06-20"},
+  {"id": "REP003", "name": "Mike Chen", "email": "mike@skygeni.com", "team": "Enterprise", "hireDate": "2023-03-10"},
+  {"id": "REP004", "name": "Emily Rodriguez", "email": "emily@skygeni.com", "team": "Mid-Market", "hireDate": "2024-02-01"},
+  {"id": "REP005", "name": "David Kim", "email": "david@skygeni.com", "team": "SMB", "hireDate": "2023-09-15"}
+]

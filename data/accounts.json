@@ -1,0 +1,12 @@
+[
+  {"id": "ACC001", "name": "TechCorp Inc", "segment": "Enterprise", "status": "Active", "createdAt": "2025-01-15"},
+  {"id": "ACC002", "name": "StartupXYZ", "segment": "SMB", "status": "Active", "createdAt": "2025-02-01"},
+  {"id": "ACC003", "name": "MegaRetail Ltd", "segment": "Enterprise", "status": "Active", "createdAt": "2024-11-20"},
+  {"id": "ACC004", "name": "CloudServices Co", "segment": "Mid-Market", "status": "Active", "createdAt": "2025-01-05"},
+  {"id": "ACC005", "name": "DataDriven LLC", "segment": "Enterprise", "status": "Active", "createdAt": "2024-12-10"},
+  {"id": "ACC006", "name": "SmallBiz Pro", "segment": "SMB", "status": "Active", "createdAt": "2025-01-20"},
+  {"id": "ACC007", "name": "Enterprise Solutions", "segment": "Enterprise", "status": "Active", "createdAt": "2024-10-15"},
+  {"id": "ACC008", "name": "GrowthCo", "segment": "Mid-Market", "status": "Active", "createdAt": "2025-02-10"},
+  {"id": "ACC009", "name": "InnovateTech", "segment": "SMB", "status": "Active", "createdAt": "2024-12-01"},
+  {"id": "ACC010", "name": "ScaleUp Inc", "segment": "Mid-Market", "status": "Active", "createdAt": "2025-01-25"}
+]

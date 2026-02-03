@@ -1,0 +1,17 @@
+[
+  {"id": "ACT001", "accountId": "ACC001", "repId": "REP001", "type": "Call", "date": "2026-01-15", "notes": "Discovery call"},
+  {"id": "ACT002", "accountId": "ACC001", "repId": "REP001", "type": "Email", "date": "2026-01-20", "notes": "Follow up"},
+  {"id": "ACT003", "accountId": "ACC002", "repId": "REP002", "type": "Call", "date": "2026-01-10", "notes": "Demo scheduled"},
+  {"id": "ACT004", "accountId": "ACC003", "repId": "REP003", "type": "Meeting", "date": "2025-12-15", "notes": "Contract review"},
+  {"id": "ACT005", "accountId": "ACC004", "repId": "REP004", "type": "Email", "date": "2026-01-22", "notes": "Proposal sent"},
+  {"id": "ACT006", "accountId": "ACC005", "repId": "REP003", "type": "Call", "date": "2025-11-30", "notes": "Technical discussion"},
+  {"id": "ACT007", "accountId": "ACC006", "repId": "REP005", "type": "Email", "date": "2026-01-25", "notes": "Pricing inquiry"},
+  {"id": "ACT008", "accountId": "ACC007", "repId": "REP001", "type": "Meeting", "date": "2025-11-25", "notes": "Executive briefing"},
+  {"id": "ACT009", "accountId": "ACC008", "repId": "REP004", "type": "Call", "date": "2026-01-18", "notes": "Needs assessment"},
+  {"id": "ACT010", "accountId": "ACC009", "repId": "REP002", "type": "Email", "date": "2025-12-05", "notes": "Feature questions"},
+  {"id": "ACT011", "accountId": "ACC001", "repId": "REP003", "type": "Email", "date": "2025-11-01", "notes": "Initial contact"},
+  {"id": "ACT012", "accountId": "ACC003", "repId": "REP001", "type": "Call", "date": "2025-12-10", "notes": "Budget discussion"},
+  {"id": "ACT013", "accountId": "ACC002", "repId": "REP005", "type": "Meeting", "date": "2026-01-12", "notes": "Product demo"},
+  {"id": "ACT014", "accountId": "ACC004", "repId": "REP004", "type": "Call", "date": "2026-01-20", "notes": "Timeline review"},
+  {"id": "ACT015", "accountId": "ACC005", "repId": "REP003", "type": "Email", "date": "2025-12-20", "notes": "Case study shared"}
+]
