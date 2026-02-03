@@ -9,8 +9,23 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-const dataService = new DataService();
-const analyticsService = new AnalyticsService(dataService);
+// Initialize services
+let dataService: DataService;
+let analyticsService: AnalyticsService;
+
+try {
+  dataService = new DataService();
+  analyticsService = new AnalyticsService(dataService);
+  console.log('Services initialized successfully');
+} catch (error) {
+  console.error('Failed to initialize services:', error);
+  process.exit(1);
+}
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
 
 // API Routes
 app.get('/api/summary', (req, res) => {
@@ -18,7 +33,8 @@ app.get('/api/summary', (req, res) => {
     const summary = analyticsService.getSummary();
     res.json(summary);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to get summary' });
+    console.error('Error in /api/summary:', error);
+    res.status(500).json({ error: 'Failed to get summary', details: String(error) });
   }
 });
 
@@ -27,7 +43,8 @@ app.get('/api/drivers', (req, res) => {
     const drivers = analyticsService.getDrivers();
     res.json(drivers);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to get drivers' });
+    console.error('Error in /api/drivers:', error);
+    res.status(500).json({ error: 'Failed to get drivers', details: String(error) });
   }
 });
 
@@ -36,7 +53,8 @@ app.get('/api/risk-factors', (req, res) => {
     const riskFactors = analyticsService.getRiskFactors();
     res.json(riskFactors);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to get risk factors' });
+    console.error('Error in /api/risk-factors:', error);
+    res.status(500).json({ error: 'Failed to get risk factors', details: String(error) });
   }
 });
 
@@ -45,7 +63,8 @@ app.get('/api/recommendations', (req, res) => {
     const recommendations = analyticsService.getRecommendations();
     res.json(recommendations);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to get recommendations' });
+    console.error('Error in /api/recommendations:', error);
+    res.status(500).json({ error: 'Failed to get recommendations', details: String(error) });
   }
 });
 
@@ -54,10 +73,17 @@ app.get('/api/revenue-trend', (req, res) => {
     const trend = analyticsService.getRevenueTrend();
     res.json(trend);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to get revenue trend' });
+    console.error('Error in /api/revenue-trend:', error);
+    res.status(500).json({ error: 'Failed to get revenue trend', details: String(error) });
   }
+});
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({ error: 'Endpoint not found', path: req.path });
 });
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Health check: http://localhost:${PORT}/api/health`);
 });

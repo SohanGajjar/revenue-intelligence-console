@@ -22,6 +22,7 @@ import { Summary, Driver, RiskFactor, Recommendation, RevenueTrendData } from '.
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [summary, setSummary] = useState<Summary | null>(null);
   const [drivers, setDrivers] = useState<Driver[]>([]);
   const [riskFactors, setRiskFactors] = useState<RiskFactor[]>([]);
@@ -31,6 +32,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setError(null);
         const [summaryData, driversData, riskData, recData, trendData] = await Promise.all([
           apiService.getSummary(),
           apiService.getDrivers(),
@@ -46,6 +48,7 @@ const App: React.FC = () => {
         setRevenueTrend(trendData);
       } catch (error) {
         console.error('Failed to fetch data:', error);
+        setError('Failed to load dashboard data. Please try refreshing the page.');
       } finally {
         setLoading(false);
       }
@@ -58,6 +61,33 @@ const App: React.FC = () => {
     return (
       <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
         <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (error) {
+    return (
+      <Box sx={{ flexGrow: 1, bgcolor: '#f5f5f5', minHeight: '100vh' }}>
+        <AppBar position="static" sx={{ bgcolor: '#1565c0' }}>
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ fontWeight: 600 }}>
+              Revenue Intelligence Console
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Box display="flex" justifyContent="center" alignItems="center" minHeight="calc(100vh - 64px)">
+          <Paper sx={{ p: 4, maxWidth: 500, textAlign: 'center', bgcolor: '#fff3cd', borderLeft: '4px solid #ff9800' }}>
+            <Typography variant="h6" sx={{ fontWeight: 600, color: '#856404', mb: 2 }}>
+              Error Loading Dashboard
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#856404', mb: 3 }}>
+              {error}
+            </Typography>
+            <Typography variant="caption" sx={{ color: '#856404' }}>
+              Make sure the backend server is running on http://localhost:3001
+            </Typography>
+          </Paper>
+        </Box>
       </Box>
     );
   }

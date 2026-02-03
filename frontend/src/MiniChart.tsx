@@ -30,13 +30,13 @@ export const MiniChart: React.FC<MiniChartProps> = ({ data, color, type = 'line'
 
     if (type === 'line') {
       const line = d3.line<number>()
-        .x((d, i) => xScale(i))
+        .x((_d, i) => xScale(i))
         .y(d => yScale(d))
         .curve(d3.curveMonotoneX);
 
       // Area under line
       const area = d3.area<number>()
-        .x((d, i) => xScale(i))
+        .x((_d, i) => xScale(i))
         .y0(height - margin.bottom)
         .y1(d => yScale(d))
         .curve(d3.curveMonotoneX);
@@ -60,7 +60,7 @@ export const MiniChart: React.FC<MiniChartProps> = ({ data, color, type = 'line'
         .data(data)
         .enter()
         .append('rect')
-        .attr('x', (d, i) => xScale(i) - barWidth / 2)
+        .attr('x', (_d, i) => xScale(i) - barWidth / 2)
         .attr('y', d => yScale(d))
         .attr('width', barWidth)
         .attr('height', d => height - margin.bottom - yScale(d))
